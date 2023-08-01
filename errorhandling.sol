@@ -11,9 +11,10 @@ contract ErrorHandling {
         assert(a > b);
         return a + b;
     }
-    
-    function revertStatement() public pure {
+    function revertStatement(uint m, uint p) public pure {
         
-        revert("This function always reverts");
+        if( m < p){
+            revert(" hello world");
+        }
     }
 }
